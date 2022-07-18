@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>video html</title>
+</head>
+<body>
+	<div style="text-align:center">
+
+		<button onclick="playPause()">putar/jeda</button>
+		<button onclick="makeBig()">perbesar</button>
+		<button onclick="makeSmall()">perkecil</button>
+		<button onclick="makeNormal()">normal</button>
+		<br><br>
+		<video id="video1" width="420">
+			<source src="movie.mp4" type="video/mp4">
+			<source src="movie.ogg" type="video/ogg">
+			your browser does not support HTML video
+		</video>
+	</div>
+
+	<script>
+		var myVideo = document.getElementById("video1");
+
+		function playPause() {
+			if(myVideo.paused)
+		    	myVideo.play();
+			else
+				myVideo.pause();
+		}
+
+		function makeBig() {
+			myVideo.width= 560;
+		}
+
+		function makeSmall() {
+			myVideo.width= 320;
+		}
+
+		function makeNormal() {
+			myVideo.width= 420;
+		}
+
+	
+	</script>
+
+	  <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+</body>
+</html>
